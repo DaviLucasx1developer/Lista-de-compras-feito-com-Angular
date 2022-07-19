@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <title>Angular JS</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div ng-app="myShoppingList" ng-controller="myCtrl">
+
+        <div class="container">
+            <h3>Minha lista de compras</h3>
+            <ul>
+                <li ng-repeat="x in products">
+                    {{x}}
+                    <span ng-click="removeItem($index)">x</span>
+                </li>
+            </ul>
+            <form>
+                <input type="text" ng-model="addMe" placeholder="Adcionar na sua lista de compras "/>
+                <button ng-click="addItem()">Add</button>
+            </form>
+        </div><!--container-->
+    </div>
+   
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src=" https://code.jquery.com/jquery-3.6.0.min.js
+"></script>
+<script src="myJquery.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+</html>
